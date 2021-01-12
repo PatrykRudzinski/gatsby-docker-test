@@ -1,0 +1,14 @@
+version: "3"
+services:
+  gatsby:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /code/
+    command: bash -c "yarn && yarn develop"
+    volumes:
+      - /code/node_modules
+      - .:/code/
+    ports:
+      - "8000:8000"
+

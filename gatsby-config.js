@@ -13,6 +13,17 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // Arbitrary name for the remote schema Query type
+        typeName: "API",
+        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+        fieldName: "api",
+        // Url to query from
+        url: "", // TODO
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
